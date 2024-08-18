@@ -55,10 +55,10 @@ function CitiesTable() {
   };
 
   return (
-    <div className="container mx-auto mt-20">
+    <div className="container mx-auto mt-20 flex flex-col">
       <h2 className="text-center text-4xl font-bold mb-4">City Table</h2>
 
-      <input
+      <input 
         className="border-2 border-black px-3 py-4 rounded-lg w-[50%]"
         placeholder="Search City..."
         onChange={handleSearchCity}
@@ -104,23 +104,23 @@ function CitiesTable() {
                     </tr>
                   </thead>
 
-                  <tbody className="divide-y divide-gray-200 dark:divide-neutral-700">
+                  <tbody className="divide-y divide-gray-200  dark:divide-neutral-700">
                     {filterCities.map((city, i) => (
                       <tr
-                        className="hover:bg-gray-100 dark:hover:bg-neutral-700"
+                        className="hover:bg-gray-50 dark:hover:bg-gray-200"
                         key={i}
                       >
                         <td
-                          className="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-800 dark:text-neutral-200 cursor-pointer"
+                          className="px-6 py-4 whitespace-nowrap text-lg font-medium dark:text-gray-950 cursor-pointer"
                           onContextMenu={(e) => handleRightClick(e, city.name)}
                         >
                           <Link to={`/weather/${city.name}`}>{city.name}</Link>
                           {/* <a href={`/weather/${city.name}`}>{city.name}</a> */}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm dark:text-gray-950">
                           {city.cou_name_en}
                         </td>
-                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm  dark:text-gray-950">
                           {city.timezone}
                         </td>
                       </tr>
