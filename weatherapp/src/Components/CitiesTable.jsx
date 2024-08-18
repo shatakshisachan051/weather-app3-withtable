@@ -1,6 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
-//import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import InfiniteScroll from "react-infinite-scroll-component";
 
 function CitiesTable() {
@@ -114,8 +114,8 @@ function CitiesTable() {
                           className="px-6 py-4 whitespace-nowrap text-lg font-medium text-gray-800 dark:text-neutral-200 cursor-pointer"
                           onContextMenu={(e) => handleRightClick(e, city.name)}
                         >
-                          {/* <Link to={`/weather/${city.name}`}>{city.name}</Link> */}
-                          <a href={`/weather/${city.name}`}>{city.name}</a>
+                          <Link to={`/weather/${city.name}`}>{city.name}</Link>
+                          {/* <a href={`/weather/${city.name}`}>{city.name}</a> */}
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-800 dark:text-neutral-200">
                           {city.cou_name_en}
