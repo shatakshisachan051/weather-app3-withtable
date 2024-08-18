@@ -7,7 +7,7 @@ function App() {
   return (
     <>
       <div>
-        <BrowserRouter>
+        <BrowserRouter basename="/weather-app3-withtable">
           <Routes>
             <Route path="/" element={<CitiesTable />} />
             <Route path="/weather/:cityName" element={<WeatherPage />} />
